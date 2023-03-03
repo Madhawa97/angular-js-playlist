@@ -3,7 +3,7 @@ var myAppHoldingVar = angular.module("myApp", []);  // pass dependencies in a ar
 // likewise the config and run method
 
 
-myAppHoldingVar.controller("formController",function($scope){ // a controller and $scope as MODEL to pass data between
+myAppHoldingVar.controller("formController", ['$scope', function($scope){ // a controller and $scope as MODEL to pass data between
   $scope.message = "Greetings";
   $scope.weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-});
+}]);
