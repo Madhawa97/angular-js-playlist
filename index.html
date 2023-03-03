@@ -9,14 +9,17 @@
   <body>
     <h3>Working Days</h3>
     
-    <div ng-controller="formController">
-      <ul>
-        <li ng-repeat="day in weekDays">{{day}}</li>
-      </ul>
-    </div>
-
-    <div ng-controller="formController">
-      <p>{{message}}</p>
+    <div ng-controller="productController">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+        <tr ng-repeat="product in products">
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
