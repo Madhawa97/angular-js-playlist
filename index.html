@@ -9,10 +9,14 @@
   <body ng-init='userDetails=["Madhawa", "Monarawila", "1997"]'>
     <h1>Hello, {{userDetails[0]}}</h1>
     
-    <div ng-init='dates=["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]'>
+    <div ng-controller="formController">
       <ul>
-        <li ng-repeat="day in dates">{{day}}</li>
+        <li ng-repeat="day in weekDays">{{day}}</li>
       </ul>
+    </div>
+
+    <div ng-controller="formController">
+      <p>{{message}}</p>
     </div>
   </body>
 </html>
