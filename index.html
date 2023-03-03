@@ -10,12 +10,13 @@
     <h3>Working Days</h3>
     
     <div ng-controller="productController">
+      <input type="text" ng-model="search">  <!-- store what is written in var called search -->
       <table>
         <tr>
           <th>Name</th>
           <th>Price</th>
         </tr>
-        <tr ng-repeat="product in products | orderBy: 'name'">
+        <tr ng-repeat="product in products | orderBy: 'name' | filter: search"> <!-- reference search variable here -->
           <td>{{product.name}}</td>
           <td>{{product.price}}</td>
         </tr>
