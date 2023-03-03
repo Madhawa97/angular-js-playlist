@@ -15,7 +15,7 @@
           <th>Name</th>
           <th>Price</th>
         </tr>
-        <tr ng-repeat="product in products">
+        <tr ng-repeat="product in products | orderBy: 'name'">
           <td>{{product.name}}</td>
           <td>{{product.price}}</td>
         </tr>
