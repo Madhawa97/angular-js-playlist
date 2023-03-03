@@ -18,7 +18,7 @@
         </tr>
         <tr ng-repeat="product in products | orderBy: 'name' | filter: search"> <!-- reference search variable here -->
           <td>{{product.name}}</td>
-          <td>{{product.price | currency}}</td>
+          <td>{{product.price | currency: '£ '}}</td>
         </tr>
       </table>
     </div>
