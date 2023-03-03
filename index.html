@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
   <head>
     <title>TheNetNinja Angular Playlist</title>
     <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
     <script src="app/lib/angular.min.js"></script>
   </head>
-  <body>
-
+  <body ng-init='userDetails=["Madhawa", "Monarawila", "1997"]'>
+    <h1>Hello, {{userDetails[0]}}</h1>
+    
+    <div ng-init='dates=["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]'>
+      <ul>
+        <li ng-repeat="day in dates">{{day}}</li>
+      </ul>
+    </div>
   </body>
 </html>
