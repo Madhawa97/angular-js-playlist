@@ -1,0 +1,24 @@
+{
+  "name": "angular-js-playlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Madhawa97/angular-js-playlist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Madhawa97/angular-js-playlist/issues"
+  },
+  "homepage": "https://github.com/Madhawa97/angular-js-playlist#readme"
+}
