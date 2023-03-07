@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
-  <head>
-    <title>TheNetNinja Angular Playlist</title>
-    <!-- <link href="content/css/styles.css" rel="stylesheet" type="text/css" /> -->
-    <link href="/dist/output.css" rel="stylesheet">
-    <script src="app/lib/angular.min.js"></script>
-    <script src="app/app.js"></script>
-  </head>
-  <body>
-    <h3>Product List</h3>
-    
-    <div ng-controller="productController">
-      <input type="text" ng-model="search">  <!-- store what is written in var called search -->
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Price</th>
-        </tr>
-        <tr ng-repeat="product in products | orderBy: 'name' | filter: search"> <!-- reference search variable here -->
-          <td>{{product.name}}</td>
-          <td>{{product.price | currency: '£ '}}</td>
-        </tr>
-      </table>
+
+<head>
+  <title>TheNetNinja Angular Playlist</title>
+  <!-- <link href="content/css/styles.css" rel="stylesheet" type="text/css" /> -->
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="app/lib/angular.min.js"></script>
+  <script src="app/app.js"></script>
+</head>
+
+<body>
+  <div class="bg-midnight text-tahiti items-center  h-screen w-screen">
+    <div class="flex items-center flex-col">
+      <h3 class="md:mt-5 text-6xl text-metal font-semibold">Product List</h3>
+
+      <div ng-controller="productController" class="flex flex-col justify-between min-w-[50%]">
+        <input type="text" ng-model="search" placeholder="Search" class="text-bubble-gum bg-midnight my-6 text-4xl">
+        <!-- store what is written in var called search -->
+        <table>
+          <tr class="flex justify-between min-w-full text-metal">
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+          <tr class="flex justify-between min-w-full" ng-repeat="product in products | orderBy: 'name' | filter: search">
+            <!-- reference search variable here -->
+            <td>{{product.name}}</td>
+            <td>{{product.price | currency: '£ '}}</td>
+          </tr>
+        </table>
+      </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
